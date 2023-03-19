@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-require("./db/connection")
-const Student = require("./models/students")
+require("./src/db/connection")
+const Student = require("./src/models/students")
 const port = process.env.PORT || 8000;
 
 app.use(express.json());
