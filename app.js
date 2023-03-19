@@ -4,9 +4,7 @@ require("./src/db/connection")
 const cors = require("cors");
 const Student = require("./src/models/students")
 const port = process.env.PORT || 8000;
-app.use(cors({
-    origin:"http://localhost:3000"
-}))
+app.use(cors());
 app.use(express.json());
 
 app.post("/students",(req,res)=>{
