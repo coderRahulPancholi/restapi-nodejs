@@ -5,13 +5,13 @@ const studentSchema = new mongoose.Schema({
 
     name:{
         type:String,
-        required: true, 
+        required: true,
+        
     },
     email:{
         type:String,
         required: true,
-        unique: true 
-        
+       
     },
     password:{
         type:String,
@@ -20,5 +20,5 @@ const studentSchema = new mongoose.Schema({
 })
 
 const Student = new mongoose.model('Student', studentSchema);
-
+Student.createIndexes();
 module.exports = Student;
